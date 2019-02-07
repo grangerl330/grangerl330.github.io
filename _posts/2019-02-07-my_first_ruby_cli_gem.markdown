@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "My first Ruby cli gem"
-date:       2019-02-07 20:22:01 +0000
+date:       2019-02-07 15:22:02 -0500
 permalink:  my_first_ruby_cli_gem
 ---
 
@@ -174,11 +174,12 @@ class AtpRankingsTop100Cli::CLI
           @range_checker = (91..100).to_a
         end
       menu
-    elsif @range_choice_input == "all"
+    elsif @range_choice_input.downcase == "all"
+      puts
       AtpRankingsTop100Cli::Player.list(0, 99)
       @range_checker = (1..100).to_a
       menu
-    elsif @range_choice_input == "exit"
+    elsif @range_choice_input.downcase == "exit"
       goodbye
     else
       puts
@@ -197,7 +198,7 @@ class AtpRankingsTop100Cli::CLI
       more_info
       see_additional_info(@player)
       stay_in_range
-    elsif @menu_input == "exit"
+    elsif @menu_input.downcase == "exit"
       goodbye
     else
       puts
@@ -211,11 +212,11 @@ class AtpRankingsTop100Cli::CLI
     puts "Would you like to stay in this rankings range? [y/n]"
     @stay_in_range_input = gets.chomp
 
-    if @stay_in_range_input == "y"
+    if @stay_in_range_input.downcase == "y"
       list_range
-    elsif @stay_in_range_input == "n"
+    elsif @stay_in_range_input.downcase == "n"
       start
-    elsif @stay_in_range_input == "exit"
+    elsif @stay_in_range_input.downcase == "exit"
       goodbye
     else
       puts
@@ -239,7 +240,7 @@ class AtpRankingsTop100Cli::CLI
     puts "Would you like to see additional info on this player? [y/n]"
     @see_additional_info_input = gets.chomp
 
-    if @see_additional_info_input == "y"
+    if @see_additional_info_input.downcase == "y"
       puts
       puts "Additional Info:"
       puts
@@ -250,9 +251,9 @@ class AtpRankingsTop100Cli::CLI
       puts "Residence: #{@player.residence}"
       puts "Plays: #{@player.plays}"
       puts "Coach: #{@player.coach}"
-    elsif @see_additional_info_input == "n"
+    elsif @see_additional_info_input.downcase == "n"
       stay_in_range
-    elsif @see_additional_info_input == "exit"
+    elsif @see_additional_info_input.downcase == "exit"
       goodbye
     else
       puts
@@ -264,7 +265,7 @@ class AtpRankingsTop100Cli::CLI
   def goodbye
     puts
     puts "Thank you for using ATP Rankings Top 100!"
-    puts 
+    puts
     exit
   end
 
