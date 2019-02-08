@@ -142,37 +142,37 @@ class AtpRankingsTop100Cli::CLI
     if (1..100).include?(@range_choice_input.to_i)
       puts
       case @range_choice_input.to_i
-        when (1..10)
-          AtpRankingsTop100Cli::Player.list(0, 9)
-          @range_checker = (1..10).to_a
-        when (11..20)
-          AtpRankingsTop100Cli::Player.list(10, 19)
-          @range_checker = (11..20).to_a
-        when (21..30)
-          AtpRankingsTop100Cli::Player.list(20, 29)
-          @range_checker = (21..30).to_a
-        when (31..40)
-          AtpRankingsTop100Cli::Player.list(30, 39)
-          @range_checker = (31..40).to_a
-        when (41..50)
-          AtpRankingsTop100Cli::Player.list(40, 49)
-          @range_checker = (41..50).to_a
-        when (51..60)
-          AtpRankingsTop100Cli::Player.list(50, 59)
-          @range_checker = (51..60).to_a
-        when (61..70)
-          AtpRankingsTop100Cli::Player.list(60, 69)
-          @range_checker = (61..70).to_a
-        when (71..80)
-          AtpRankingsTop100Cli::Player.list(70, 79)
-          @range_checker = (71..80).to_a
-        when (81..90)
-          AtpRankingsTop100Cli::Player.list(80, 89)
-          @range_checker = (81..90).to_a
-        when (91..100)
-          AtpRankingsTop100Cli::Player.list(90, 99)
-          @range_checker = (91..100).to_a
-        end
+      when (1..10)
+        AtpRankingsTop100Cli::Player.list(0, 9)
+        @range_checker = (1..10).to_a
+      when (11..20)
+        AtpRankingsTop100Cli::Player.list(10, 19)
+        @range_checker = (11..20).to_a
+      when (21..30)
+        AtpRankingsTop100Cli::Player.list(20, 29)
+        @range_checker = (21..30).to_a
+      when (31..40)
+        AtpRankingsTop100Cli::Player.list(30, 39)
+        @range_checker = (31..40).to_a
+      when (41..50)
+        AtpRankingsTop100Cli::Player.list(40, 49)
+        @range_checker = (41..50).to_a
+      when (51..60)
+        AtpRankingsTop100Cli::Player.list(50, 59)
+        @range_checker = (51..60).to_a
+      when (61..70)
+        AtpRankingsTop100Cli::Player.list(60, 69)
+        @range_checker = (61..70).to_a
+      when (71..80)
+        AtpRankingsTop100Cli::Player.list(70, 79)
+        @range_checker = (71..80).to_a
+      when (81..90)
+        AtpRankingsTop100Cli::Player.list(80, 89)
+        @range_checker = (81..90).to_a
+      when (91..100)
+        AtpRankingsTop100Cli::Player.list(90, 99)
+        @range_checker = (91..100).to_a
+      end
       menu
     elsif @range_choice_input.downcase == "all"
       puts
@@ -270,6 +270,7 @@ class AtpRankingsTop100Cli::CLI
   end
 
 end
+
 ```
 
 The CLI class is all about actually running the functions of the program. When the user runs the program, it starts by calling the `call` method on the CLI class. This method starts off the chain of logic within the CLI class that makes the program function.  The basic structure of the program is as follows:
