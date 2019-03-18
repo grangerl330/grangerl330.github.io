@@ -1,6 +1,6 @@
 ---
 layout: post
-title:      "Sinatra Final Project Kitchen Organizer"
+title:      "Sinatra Final Project- Kitchen Organizer"
 date:       2019-03-18 14:25:26 -0400
 permalink:  sinatra_final_project_-_kitchen_organizer
 ---
