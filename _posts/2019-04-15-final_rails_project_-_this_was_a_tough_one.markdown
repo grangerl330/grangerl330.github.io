@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "Final Rails Project - This was a tough one"
-date:       2019-04-15 18:29:55 +0000
+date:       2019-04-15 14:29:56 -0400
 permalink:  final_rails_project_-_this_was_a_tough_one
 ---
 
