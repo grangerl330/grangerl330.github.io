@@ -1,11 +1,11 @@
 # Site settings
 author: Luke Granger
-title: 
+title: Learning To Code
 header-img: img/home-bg.png
 email: grangerl330@gmail.com
 copyright_name: Luke Granger
 description: > # this means to ignore newlines until "baseurl:"
-  
+  My journey to become a professional web developer.
 baseurl: "" # the subpath of your site, e.g. /blog
 twitter_username: 
 github_username:  grangerl330
